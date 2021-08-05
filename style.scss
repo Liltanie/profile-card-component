@@ -1,0 +1,93 @@
+$white: #fff;
+$dark-grey: #969696;
+$dark-cyan: #19a2ae;
+$dark-blue: #2d3248;
+$grayish-blue: #6a6f81;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: $dark-cyan;
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    color: $dark-blue;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background: $white;
+    width: 326px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 #00000033;
+    &-header{
+        width: 326px;
+        display: block; //elimina espacio fantasma
+    }
+
+    &-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-img{
+            border: 5px solid $white;
+            border-radius: 50%;
+            margin-top: -53px;
+            background: $white;
+        }
+        
+        &-title{
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 0;
+
+            span{
+                color: $grayish-blue;
+                font-weight: 400;
+            }
+        }
+
+        &-text{
+            font-size: 1.5rem;
+            color: $dark-grey;
+            margin-top: 1rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        border-top: 1px solid #ddd;
+
+        h3{
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 1.8rem;
+            margin-bottom: .5rem;
+        }
+
+        p{
+            margin-bottom: 1.8rem;
+            color: $grayish-blue;
+            letter-spacing: 2px;
+        }
+    }
+}
